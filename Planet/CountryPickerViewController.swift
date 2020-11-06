@@ -119,7 +119,7 @@ public extension CountryPickerViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let style: UITableViewCellStyle = showsCallingCodes ? .subtitle : .default
+        let style: UITableViewCell.CellStyle = showsCallingCodes ? .subtitle : .default
         let identifier = showsCallingCodes ? "SubtitleCell" : "DefaultCell"
         
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier)
