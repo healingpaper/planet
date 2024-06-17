@@ -60,7 +60,7 @@ public class CountryPickerViewController: UITableViewController {
     
     fileprivate func tableFooterView() -> UIView {
         let tableFooterView = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 44.0))
-        tableFooterView.text = NSLocalizedString("Icons by emojione.com", comment: "Icons by emojione.com")
+        tableFooterView.text = "Icons by emojione.com"
         tableFooterView.textAlignment = .center
         tableFooterView.textColor = UIColor(white: 0.500, alpha: 1.0)
         tableFooterView.font = UIFont.systemFont(ofSize: UIFont.smallSystemFontSize)
