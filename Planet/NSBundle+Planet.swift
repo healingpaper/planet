@@ -9,7 +9,11 @@
 import Foundation
 
 extension Bundle {
-    class func planetBundle() -> Bundle {
-        return Bundle(for: CountryPickerViewController.self)
-    }
+  class func planetBundle() -> Bundle {
+#if SWIFT_PACKAGE
+    return .module
+#else
+    return Bundle(for: CountryPickerViewController.self)
+#endif
+  }
 }

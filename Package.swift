@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "Planet",
+    defaultLocalization: "en",
     platforms: [.iOS(.v14)],
     products: [
         .library(
@@ -15,7 +16,9 @@ let package = Package(
         .target(
             name: "Planet",
             path: "Planet",
-            resources: [.copy("Planet.xcassets")]),
+            resources: [
+              .copy("Planet.xcassets")
+            ]),
     ]
 )
 

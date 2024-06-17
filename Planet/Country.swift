@@ -32,8 +32,11 @@ extension Country {
         }
         
         if callingCodes.isEmpty {
-            let dataAsset = NSDataAsset(name: "country-calling-codes", bundle: .planetBundle())!
+          if let dataAsset = NSDataAsset(name: "country-calling-codes", bundle: .planetBundle()) {
             callingCodes = (try? JSONSerialization.jsonObject(with: dataAsset.data, options: [])) as! [String: String]
+          } else {
+            print("no have json")
+          }
         }
         
         var countries: [Country] = []
