@@ -15,7 +15,7 @@ let package = Package(
         .target(
             name: "Planet",
             path: "Planet",
-            resources: [.process("Planet.xcassets")]),
+            resources: [.copy("Planet.xcassets")]),
     ]
 )
 
